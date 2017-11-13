@@ -27,6 +27,8 @@ dependencies {
     })
     compile "com.android.support:appcompat-v7:${versions.supportLib}"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+
     testCompile 'junit:junit:4.12'
 
     implementation("com.mikepenz:materialdrawer:6.0.1@aar") {
@@ -38,4 +40,11 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:${versions.supportLib}"
     implementation "com.android.support:support-annotations:${versions.supportLib}"
     implementation "com.android.support:design:${versions.supportLib}"
+
+    implementation "com.mikepenz:iconics-core:2.9.5@aar"
+    implementation 'com.mikepenz:fontawesome-typeface:4.7.0.2@aar'
+
+/*
+    compile 'com.mikepenz:fontawesome-typeface:x.y.z@aar'
+*/
 }
