@@ -16,3 +16,4 @@
 * 14. RecyclerView with Custome adapter (with various custome row)
 * 15. Shared Preference.
 * 16. Design pattern library.
+* 17. Font Awesome (https://github.com/mikepenz/Android-Iconics)
