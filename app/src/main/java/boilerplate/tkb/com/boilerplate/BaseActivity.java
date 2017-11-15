@@ -106,18 +106,8 @@ public class BaseActivity extends AppCompatActivity {
                 .withAccountHeader(headerResult) //set the AccountHeader we created earlier for the header
                 .addDrawerItems(
                         new PrimaryDrawerItem().withName(R.string.drawer_item_compact_header).withDescription(R.string.drawer_item_compact_header_desc).withIcon(GoogleMaterial.Icon.gmd_brightness_5).withIdentifier(1).withSelectable(false),
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_action_bar_drawer).withDescription(R.string.drawer_item_action_bar_drawer_desc).withIcon(FontAwesome.Icon.faw_home).withIdentifier(2).withSelectable(false),
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_multi_drawer).withDescription(R.string.drawer_item_multi_drawer_desc).withIcon(FontAwesome.Icon.faw_gamepad).withIdentifier(3).withSelectable(false),
                         new PrimaryDrawerItem().withName(R.string.drawer_item_non_translucent_status_drawer).withDescription(R.string.drawer_item_non_translucent_status_drawer_desc).withIcon(FontAwesome.Icon.faw_eye).withIdentifier(4).withSelectable(false).withBadgeStyle(new BadgeStyle().withTextColor(Color.WHITE).withColorRes(R.color.md_red_700)),
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_advanced_drawer).withDescription(R.string.drawer_item_advanced_drawer_desc).withIcon(GoogleMaterial.Icon.gmd_adb).withIdentifier(5).withSelectable(false),
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_embedded_drawer).withDescription(R.string.drawer_item_embedded_drawer_desc).withIcon(GoogleMaterial.Icon.gmd_battery_full).withIdentifier(7).withSelectable(false),
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_fullscreen_drawer).withDescription(R.string.drawer_item_fullscreen_drawer_desc).withIcon(GoogleMaterial.Icon.gmd_label).withIdentifier(8).withSelectable(false),
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_custom_container_drawer).withDescription(R.string.drawer_item_custom_container_drawer_desc).withIcon(GoogleMaterial.Icon.gmd_my_location).withIdentifier(9).withSelectable(false),
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_menu_drawer).withDescription(R.string.drawer_item_menu_drawer_desc).withIcon(GoogleMaterial.Icon.gmd_filter_list).withIdentifier(10).withSelectable(false),
                         new PrimaryDrawerItem().withName(R.string.drawer_item_mini_drawer).withDescription(R.string.drawer_item_mini_drawer_desc).withIcon(GoogleMaterial.Icon.gmd_battery_charging_full).withIdentifier(11).withSelectable(false),
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_fragment_drawer).withDescription(R.string.drawer_item_fragment_drawer_desc).withIcon(GoogleMaterial.Icon.gmd_disc_full).withIdentifier(12).withSelectable(false),
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_collapsing_toolbar_drawer).withDescription(R.string.drawer_item_collapsing_toolbar_drawer_desc).withIcon(GoogleMaterial.Icon.gmd_camera_rear).withIdentifier(13).withSelectable(false),
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_persistent_compact_header).withDescription(R.string.drawer_item_persistent_compact_header_desc).withIcon(GoogleMaterial.Icon.gmd_brightness_5).withIdentifier(14).withSelectable(false),
                         new PrimaryDrawerItem().withName(R.string.drawer_item_crossfade_drawer_layout_drawer).withDescription(R.string.drawer_item_crossfade_drawer_layout_drawer_desc).withIcon(GoogleMaterial.Icon.gmd_format_bold).withIdentifier(15).withSelectable(false),
 
                         new ExpandableBadgeDrawerItem().withName("Collapsable Badge").withIcon(GoogleMaterial.Icon.gmd_format_bold).withIdentifier(18).withSelectable(false).withBadgeStyle(new BadgeStyle().withTextColor(Color.WHITE).withColorRes(R.color.md_red_700)).withBadge("100").withSubItems(
@@ -155,31 +145,11 @@ public class BaseActivity extends AppCompatActivity {
                             Intent intent = null;
                             if (drawerItem.getIdentifier() == 1) {
                                 //intent = new Intent(BaseActivity.this, CompactHeaderDrawerActivity.class);
-                            } else if (drawerItem.getIdentifier() == 2) {
-                                //intent = new Intent(BaseActivity.this, ActionBarActivity.class);
-                            } else if (drawerItem.getIdentifier() == 3) {
-                                //intent = new Intent(BaseActivity.this, MultiDrawerActivity.class);
-                            } else if (drawerItem.getIdentifier() == 4) {
+                            }  else if (drawerItem.getIdentifier() == 4) {
                                 //intent = new Intent(BaseActivity.this, NonTranslucentDrawerActivity.class);
-                            } else if (drawerItem.getIdentifier() == 5) {
-                                //intent = new Intent(BaseActivity.this, AdvancedActivity.class);
-                            } else if (drawerItem.getIdentifier() == 7) {
-                                //intent = new Intent(BaseActivity.this, EmbeddedDrawerActivity.class);
-                            } else if (drawerItem.getIdentifier() == 8) {
-                                //intent = new Intent(BaseActivity.this, FullscreenDrawerActivity.class);
-                            } else if (drawerItem.getIdentifier() == 9) {
-                               // intent = new Intent(BaseActivity.this, CustomContainerActivity.class);
-                            } else if (drawerItem.getIdentifier() == 10) {
-                                //intent = new Intent(BaseActivity.this, MenuDrawerActivity.class);
                             } else if (drawerItem.getIdentifier() == 11) {
-                                //intent = new Intent(BaseActivity.this, MiniDrawerActivity.class);
-                            } else if (drawerItem.getIdentifier() == 12) {
-                                //intent = new Intent(BaseActivity.this, FragmentActivity.class);
-                            } else if (drawerItem.getIdentifier() == 13) {
-                                //intent = new Intent(BaseActivity.this, CollapsingToolbarActivity.class);
-                            } else if (drawerItem.getIdentifier() == 14) {
-                                //intent = new Intent(BaseActivity.this, PersistentDrawerActivity.class);
-                            } else if (drawerItem.getIdentifier() == 15) {
+                                intent = new Intent(BaseActivity.this, MiniDrawerActivity.class);
+                            }  else if (drawerItem.getIdentifier() == 15) {
                                 //intent = new Intent(BaseActivity.this, CrossfadeDrawerLayoutActvitiy.class);
                             } else if (drawerItem.getIdentifier() == 20) {
                                 /*intent = new LibsBuilder()
@@ -188,7 +158,7 @@ public class BaseActivity extends AppCompatActivity {
                                         .intent(BaseActivity.this);*/
                             }
                             if (intent != null) {
-                                //BaseActivity.this.startActivity(intent);
+                                BaseActivity.this.startActivity(intent);
                             }
                         }
 
