@@ -3,6 +3,7 @@ package boilerplate.tkb.com.boilerplate;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -39,6 +40,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 import com.mikepenz.octicons_typeface_library.Octicons;
 
+import boilerplate.tkb.com.boilerplate.fragments.DrawerFragment;
 import boilerplate.tkb.com.boilerplate.utils.CrossfadeWrapper;
 import boilerplate.tkb.com.boilerplate.utils.SystemUtils;
 
@@ -120,7 +122,10 @@ public class MiniDrawerActivity extends AppCompatActivity {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         if (drawerItem instanceof Nameable) {
-                            Toast.makeText(MiniDrawerActivity.this, ((Nameable) drawerItem).getName().getText(MiniDrawerActivity.this), Toast.LENGTH_SHORT).show();
+
+                            Fragment f = DrawerFragment.newInstance("Demo");
+                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
+                            return true;
                         }
                         return false;
                     }

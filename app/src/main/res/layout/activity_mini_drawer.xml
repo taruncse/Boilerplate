@@ -24,6 +24,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:gravity="center"
+            android:visibility="gone"
             android:text="@string/drawer_item_embedded_drawer"
             android:textSize="16sp" />
     </FrameLayout>
