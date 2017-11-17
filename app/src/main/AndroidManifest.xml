@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="boilerplate.tkb.com.boilerplate">
+    package="com.tkb.boilerplate">
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-        <activity android:name=".MiniDrawerActivity"
+        <activity android:name=".drawer.MiniDrawerActivity"
             android:theme="@style/MaterialDrawerTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +18,7 @@
         </activity>
 
         <activity
-            android:name=".BaseActivity"
+            android:name=".drawer.BaseActivity"
             android:theme="@style/MaterialDrawerTheme.Light.DarkToolbar" />
     </application>
 
