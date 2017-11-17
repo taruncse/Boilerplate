@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.mikepenz.materialdrawer.Drawer;
 
 import com.tkb.boilerplate.R;
+import com.tkb.boilerplate.common.BaseFragment;
 
 
 /**

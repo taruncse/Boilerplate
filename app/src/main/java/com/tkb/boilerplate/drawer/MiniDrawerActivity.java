@@ -3,7 +3,6 @@ package com.tkb.boilerplate.drawer;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -38,14 +37,15 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 import com.mikepenz.octicons_typeface_library.Octicons;
 import com.tkb.boilerplate.R;
-import com.tkb.boilerplate.drawer.fragments.BaseFragment;
+import com.tkb.boilerplate.common.BaseActivity;
+import com.tkb.boilerplate.common.BaseFragment;
 import com.tkb.boilerplate.drawer.fragments.DrawerFragment;
 import com.tkb.boilerplate.drawer.fragments.FirstFragment;
 import com.tkb.boilerplate.drawer.utils.CrossfadeWrapper;
 import com.tkb.boilerplate.drawer.utils.SystemUtils;
 
 
-public class MiniDrawerActivity extends AppCompatActivity {
+public class MiniDrawerActivity extends BaseActivity {
     private static final int PROFILE_SETTING = 1;
 
     //save our header or result
@@ -125,7 +125,7 @@ public class MiniDrawerActivity extends AppCompatActivity {
                         if (drawerItem instanceof Nameable) {
 
                             BaseFragment f = DrawerFragment.newInstance("Demo");
-                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
+                            openFragment(f);
                             return true;
                         }
                         return false;
@@ -161,11 +161,14 @@ public class MiniDrawerActivity extends AppCompatActivity {
         //initialize a fragment to set as default view
         if (savedInstanceState == null) {
             BaseFragment f = FirstFragment.newInstance("First Fragment");
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
+            openFragment(f);
         }
 
     }
 
+    private void openFragment(BaseFragment fragment){
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+    }
     private OnCheckedChangeListener onCheckedChangeListener = new OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(IDrawerItem drawerItem, CompoundButton buttonView, boolean isChecked) {

@@ -27,9 +27,10 @@ import com.mikepenz.materialdrawer.model.SectionDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.tkb.boilerplate.R;
+import com.tkb.boilerplate.common.BaseActivity;
 
 
-public class BaseActivity extends AppCompatActivity {
+public class BaseDrawerActivity extends BaseActivity {
     private static final int PROFILE_SETTING = 100000;
 
     //save our header or result
@@ -39,7 +40,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base);
+        setContentView(R.layout.activity_base_drawer);
 
         //Remove line to test RTL support
         //getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
@@ -143,21 +144,21 @@ public class BaseActivity extends AppCompatActivity {
                         if (drawerItem != null) {
                             Intent intent = null;
                             if (drawerItem.getIdentifier() == 1) {
-                                //intent = new Intent(BaseActivity.this, CompactHeaderDrawerActivity.class);
+                                //intent = new Intent(BaseDrawerActivity.this, CompactHeaderDrawerActivity.class);
                             }  else if (drawerItem.getIdentifier() == 4) {
-                                //intent = new Intent(BaseActivity.this, NonTranslucentDrawerActivity.class);
+                                //intent = new Intent(BaseDrawerActivity.this, NonTranslucentDrawerActivity.class);
                             } else if (drawerItem.getIdentifier() == 11) {
-                                intent = new Intent(BaseActivity.this, MiniDrawerActivity.class);
+                                intent = new Intent(BaseDrawerActivity.this, MiniDrawerActivity.class);
                             }  else if (drawerItem.getIdentifier() == 15) {
-                                //intent = new Intent(BaseActivity.this, CrossfadeDrawerLayoutActvitiy.class);
+                                //intent = new Intent(BaseDrawerActivity.this, CrossfadeDrawerLayoutActvitiy.class);
                             } else if (drawerItem.getIdentifier() == 20) {
                                 /*intent = new LibsBuilder()
                                         .withFields(R.string.class.getFields())
                                         .withActivityStyle(Libs.ActivityStyle.LIGHT_DARK_TOOLBAR)
-                                        .intent(BaseActivity.this);*/
+                                        .intent(BaseDrawerActivity.this);*/
                             }
                             if (intent != null) {
-                                BaseActivity.this.startActivity(intent);
+                                BaseDrawerActivity.this.startActivity(intent);
                             }
                         }
 

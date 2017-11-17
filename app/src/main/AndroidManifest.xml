@@ -8,7 +8,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-        <activity android:name=".drawer.MiniDrawerActivity"
+        <activity
+            android:name=".drawer.MiniDrawerActivity"
             android:theme="@style/MaterialDrawerTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,10 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".drawer.BaseActivity"
+            android:name=".drawer.BaseDrawerActivity"
             android:theme="@style/MaterialDrawerTheme.Light.DarkToolbar" />
+        <activity
+            android:name=".common.BaseActivity"
+            android:label="@string/title_activity_base"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

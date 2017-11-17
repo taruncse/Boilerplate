@@ -1,4 +1,4 @@
-package com.tkb.boilerplate.drawer.fragments;
+package com.tkb.boilerplate.common;
 
 import android.support.v4.app.Fragment;
 
