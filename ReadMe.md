@@ -1,4 +1,4 @@
-# Features of the boilerplate.
+# Features of the boilerplate.(All the libraries will be added in a modular way to remove dependency from each other, if we change a libray or a part of the libray , it will not effect rest of the project)
 
 * 1. Toast (https://github.com/GrenderG/Toasty)
 * 2. Alert with flexible button.
@@ -17,3 +17,5 @@
 * 15. Shared Preference.
 * 16. Design pattern library.
 * 17. Font Awesome (https://github.com/mikepenz/Android-Iconics)
+* 18. In App purchase
+* 19. Admob
