@@ -56,4 +56,8 @@ dependencies {
 /*
     compile 'com.mikepenz:fontawesome-typeface:x.y.z@aar'
 */
+
+   /* for toast message*/
+    compile 'com.github.GrenderG:Toasty:1.2.5'
+
 }

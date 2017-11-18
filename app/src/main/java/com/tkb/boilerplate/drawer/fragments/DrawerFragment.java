@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.mikepenz.materialdrawer.Drawer;
 
 import com.tkb.boilerplate.R;
+import com.tkb.boilerplate.Toast.Toaster;
 import com.tkb.boilerplate.common.BaseFragment;
 
 
@@ -43,7 +44,7 @@ public class DrawerFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         // don't look at this layout it's just a listView to show how to handle the keyboard
-        Toast.makeText(getActivity(), "Fragment Created", Toast.LENGTH_SHORT).show();
+        Toaster.init().succcess("Fragment Create");
 
         View view = inflater.inflate(R.layout.fragment_simple_sample, container, false);
 
