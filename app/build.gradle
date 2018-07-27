@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "boilerplate.tkb.com.boilerplate"
         minSdkVersion 19
@@ -31,7 +31,7 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
 
-    implementation("com.mikepenz:materialdrawer:6.0.1@aar") {
+    implementation("com.mikepenz:materialdrawer:6.0.9@aar") {
         transitive = true
     }
 
