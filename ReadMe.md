@@ -19,3 +19,5 @@
 * 17. Font Awesome (https://github.com/mikepenz/Android-Iconics)
 * 18. In App purchase
 * 19. Admob
+* 20. FirstLane
+* 21. Android Architectural component
