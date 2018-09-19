@@ -23,6 +23,6 @@
 * 21. Android Architectural component
 * 22. Retrofit (https://square.github.io/retrofit/)
 * 23. Glide
-* 24. payment gateway(Bikash, roket, card like visa , master card ect)
+* 24. Payment gateway(Bikash, Roket, Visa , Master Card ect)
 
 
