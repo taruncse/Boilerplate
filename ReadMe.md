@@ -24,6 +24,7 @@
 * 22. Retrofit (https://square.github.io/retrofit/)
 * 23. Glide
 * 24. Payment gateway(Bikash, Roket, Visa , Master Card ect)
-* xxv. Animation
+* 25. Animation
+* 26. Add Build varient and build flavour.
 
 
