@@ -22,7 +22,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile "com.android.support:appcompat-v7:${versions.supportLib}"
@@ -57,7 +57,24 @@ dependencies {
     compile 'com.mikepenz:fontawesome-typeface:x.y.z@aar'
 */
 
-   /* for toast message*/
+    /* for toast message*/
     compile 'com.github.GrenderG:Toasty:1.2.5'
 
+    /*For utility */
+    implementation 'com.github.nisrulz:android-utils:1.0.8'
+
+    // Circular image view
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //Glide lazy loading
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+
+    // Architecture  component
+    implementation "android.arch.lifecycle:extensions:$viewModelVersion"
+    implementation 'android.arch.persistence.room:runtime:1.0.0'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.0.0'
+
+    // Event Bus
+    compile 'org.greenrobot:eventbus:3.1.1'
 }
