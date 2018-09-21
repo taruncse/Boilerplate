@@ -25,7 +25,11 @@
             android:name=".common.BaseActivity"
             android:label="@string/title_activity_base"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".annotation.AnnotationActivity"></activity>
+
+        <activity
+            android:name=".annotation.AnnotationActivity_"
+            android:label="@string/title_activity_base"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
