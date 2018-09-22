@@ -30,6 +30,7 @@
             android:name=".annotation.AnnotationActivity_"
             android:label="@string/title_activity_base"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".annotation.AnnotationActivity" />
     </application>
 
 </manifest>
