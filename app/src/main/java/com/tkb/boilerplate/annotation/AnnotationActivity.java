@@ -1,8 +1,6 @@
 package com.tkb.boilerplate.annotation;
 
-import android.app.Activity;
 import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
 
 import com.tkb.boilerplate.R;
 import com.tkb.boilerplate.common.BaseActivity;
