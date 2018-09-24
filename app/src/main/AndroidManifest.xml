@@ -11,9 +11,7 @@
         android:supportsRtl="true">
         <activity
             android:name=".drawer.MiniDrawerActivity"
-            android:theme="@style/MaterialDrawerTheme">
-
-        </activity>
+            android:theme="@style/MaterialDrawerTheme"></activity>
         <activity
             android:name=".drawer.BaseDrawerActivity"
             android:theme="@style/MaterialDrawerTheme.Light.DarkToolbar" />
@@ -21,17 +19,25 @@
             android:name=".common.BaseActivity"
             android:label="@string/title_activity_base"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".annotation.AnnotationActivity_"
             android:label="@string/title_activity_base"
-            android:theme="@style/AppTheme.NoActionBar" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:theme="@style/AppTheme.NoActionBar">
+           <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        >
+        <activity android:name=".annotation.AnnotationNormalActivity"
+            android:theme="@style/Theme.AppCompat">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
