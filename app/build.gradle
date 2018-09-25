@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    buildToolsVersion '28.0.2'
     defaultConfig {
         //applicationId "boilerplate.tkb.com.boilerplate"
         minSdkVersion 19
@@ -10,6 +10,13 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                        'androidManifestFile': 'app\\build\\intermediates\\merged_manifests\\debug\\processDebugManifest\\merged\\AndroidManifest.xml'
+                ]
+            }
+        }
     }
     buildTypes {
         release {
@@ -18,7 +25,7 @@ android {
         }
     }
 
-    sourceSets {
+    /*sourceSets {
         main {
             res.srcDirs =
                     [
@@ -27,9 +34,20 @@ android {
                             'src/main/res'
                     ]
         }
-    }
+    }*/
+    /*splits{
+        abi {
+            enable true
+            reset()
+            include 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'x86', 'x86_64'
+            universalApk false
+        }
+    }*/
+
 
 }
+
+
 def AAVersion = '4.4.0'
 
 
