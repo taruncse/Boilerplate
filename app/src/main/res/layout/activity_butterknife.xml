@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context=".butterknife.butterknifeActivity">
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="password"
+        android:maxLines="1"
+        android:password="true"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="61dp"/>
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:password="true"
+        android:layout_width="fill_parent"
+        android:id="@+id/password"
+        android:hint="password"
+        android:maxLines="1">
+    </EditText>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/buttonsubmit"
+        android:hint="submit"
+        android:textColor="@color/colorAccent"/>
+
+</LinearLayout>
